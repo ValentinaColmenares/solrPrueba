@@ -15,7 +15,7 @@ public class GlobalExceptionHandler {
     return ResponseEntity
       .status(e.getStatusCode())
       .body(
-        "La colección o los parámetros son incorrectos." + e.getResponseBodyAsString()
+        "La colección o los parámetros son incorrectos. \n" + e.getResponseBodyAsString()
       );
   }
 
