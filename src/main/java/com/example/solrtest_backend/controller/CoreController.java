@@ -25,10 +25,6 @@ public class CoreController {
   private String solrBaseUrl;
 
   private final RestTemplate restTemplate;
- 
-  public CoreController() {
-    this.restTemplate = new RestTemplate();
-  }
   
   // Build Get Solr REST API
   @GetMapping("{core}")
