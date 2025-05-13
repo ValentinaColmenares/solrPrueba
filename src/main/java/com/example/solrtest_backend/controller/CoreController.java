@@ -30,7 +30,7 @@ public class CoreController {
   
   // Build Post Solr REST API
   @PostMapping("{core}")
-  public ResponseEntity<String> agregarSolr(@PathVariable("core") String core,
+  public ResponseEntity<String> agregarSolr(@PathVariable String core,
                                             @RequestBody Object documents) {
     String body =  solrTemplate.agregarDocumentos(core, documents);
     return ResponseEntity.ok(body);
@@ -38,7 +38,7 @@ public class CoreController {
   
   // Build Get Solr REST API
   @GetMapping("{core}")
-  public ResponseEntity<String> consultarSolr(@PathVariable("core") String core,
+  public ResponseEntity<String> consultarSolr(@PathVariable String core,
                                               @RequestParam Map<String, String> queryParams) { 
     String body = solrTemplate.consultarDocumentos(core, queryParams);
     return ResponseEntity.ok(body);
